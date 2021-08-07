@@ -1,3 +1,26 @@
+._container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1182px) {
+  ._container {
+    max-width: 970px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  ._container {
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  ._container {
+    max-width: none;
+  }
+}
+
 body {
   font-family: "Kumbh Sans", sans-serif;
   font-size: 18px;
@@ -6,6 +29,10 @@ body {
 
 .wrapper {
   background-color: #19a1ae;
+  background-image: url(images/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20,7 +47,7 @@ body {
 
 .profile {
   width: 350px;
-  height: 374px;
+  min-height: 374px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 50px 100px -20px rgba(8, 70, 94, 0.504835);
           box-shadow: 0px 50px 100px -20px rgba(8, 70, 94, 0.504835);
@@ -28,24 +55,15 @@ body {
   overflow: hidden;
 }
 
-.profile__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 100%;
+@media (max-width: 767.98px) {
+  .profile {
+    width: 326px;
+  }
 }
 
 .profile__header {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 150px;
-          flex: 0 1 150px;
+  height: 150px;
+  margin-bottom: 72px;
   background-image: url(images/header.png);
   background-size: cover;
   background-position: center center;
@@ -81,7 +99,7 @@ body {
 }
 
 .profile__content {
-  margin-top: 30px;
+  margin-bottom: 28px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;

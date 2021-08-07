@@ -5,6 +5,29 @@ $gray: #e8e9ec;
 $text-dark: #2e3349;
 $text-light: #6b7082;
 
+$maxWidthContainer: 1170;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+._container {
+	max-width: $maxWidthContainer + px;
+	margin: 0 auto;
+	@media (max-width: $md1+px) {
+		max-width: 970px;
+	}
+	@media (max-width: $md2+px) {
+		max-width: 750px;
+	}
+	@media (max-width: $md3+px) {
+		max-width: none;
+		// padding: 0 10px;
+	}
+}
+
+// ===============================================================
+
 body {
   font-family: "Kumbh Sans", sans-serif;
   font-size: 18px;
@@ -13,6 +36,10 @@ body {
 
 .wrapper {
   background-color: $bg-blue;
+  background-image: url(images/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 
   display: flex;
   align-items: center;
@@ -23,21 +50,27 @@ body {
 
 .profile {
   width: 350px;
-  height: 374px;
+  min-height: 374px;
   background-color: $white;
   box-shadow: 0px 50px 100px -20px rgba(8, 70, 94, 0.504835);
   border-radius: 15px;
   overflow: hidden;
 
+  @media (max-width:$md3+px){
+     width: 326px; 
+  }
+
   &__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+    // height: 100%;
   }
 
   &__header {
-    flex: 0 1 150px;
+    // flex: 0 1 150px;
+    height: 150px;
+    margin-bottom: 72px;
     background-image: url(images/header.png);
     background-size: cover;
     background-position: center center;
@@ -66,7 +99,8 @@ body {
   }
 
   &__content {
-    margin-top: 30px;
+    margin-bottom: 28px;
+    // margin-top: 30px;
     align-self: center;
     text-align: center;
   }
