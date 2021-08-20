@@ -60,6 +60,10 @@ body {
      width: 326px; 
   }
 
+  @media (max-width:$md4+px){
+     width: 290px; 
+  }
+
   &__container {
     // display: flex;
     // flex-direction: column;

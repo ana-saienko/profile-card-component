@@ -61,6 +61,12 @@ body {
   }
 }
 
+@media (max-width: 479.98px) {
+  .profile {
+    width: 290px;
+  }
+}
+
 .profile__header {
   height: 150px;
   margin-bottom: 72px;
